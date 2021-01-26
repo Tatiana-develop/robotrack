@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Create a competition{% endblock %}
+
+{% block content %}
+    <h1>Create a competition</h1>
+    <form action="." method="post">
+        {{ competition_form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Create a competition"></p>
+    </form>
+{% endblock %}
