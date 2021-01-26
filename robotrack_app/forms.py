@@ -33,7 +33,7 @@ class CompetitionForms(forms.ModelForm):
 
 
 class RefreeForms(forms.ModelForm):
-    referee = forms.CharField(widget=forms.Select(choices=self.get_full_name()))
+    # referee = forms.CharField(widget=forms.Select(choices=self.get_full_name()))
 
     def get_full_name(self):
         full_name = robotrack_app.models.User.objects.values('first_name', 'last_name')
